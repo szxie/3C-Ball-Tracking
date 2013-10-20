@@ -1,0 +1,42 @@
+#include <cv.h>
+#include <highgui.h> 
+#include <iostream>
+
+using namespace std;
+
+void edge(char *fileN)
+{
+	IplImage* img = NULL;
+	IplImage* img_gray = NULL;
+	IplImage* img_edge = NULL;
+
+	img = cvLoadImage(fileN, 1);
+	if (!img) {
+		cout << "Could not load image file " << fileN << endl; 
+		exit(0);
+	}
+
+	//rgb to gray
+	img_gray = cvCreateImage(cvGetSize(img), img->depth, 1);
+	cvCvtColor(img, img_gray, CV_BGR2GRAY);
+
+	//canny
+	img_edge = cvCreateImage( cvGetSize(img_gray), IPL_DEPTH_8U, 1);
+	cvCanny(img_edge, img_gray, 30, 150, 3);
+	
+	//show image
+	cvNamedWindow("mainWin", CV_WINDOW_AUTOSIZE);
+	cvMoveWindow("mainWin", 100, 100);
+	cvShowImage("mainWin", img_edge);
+
+	cvWaitKey(0);
+	cvReleaseImage(&img_edge);
+
+}
+
+int main(int argc, char *argv[])
+{
+	edge(argv[1]);
+	return 0;
+
+}
