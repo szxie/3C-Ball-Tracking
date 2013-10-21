@@ -1,19 +1,25 @@
 #3C科创
 AIM：算出图中圆的直径
 ##Code
-Edge.cpp	是可以用的提取边缘的代码
+Edge.cpp	可以用的提取边缘的代码（c语言格式）
 
-EdgeT.cpp	尝试从图片中查找圆，效果比较差
-
-Int.cpp
-
-Int2.cpp
+Circle.cpp	找圆代码，只对out2_1.jpg有效（c++语言格式）
 
 try.cpp		可以用来测试环境配置是否成功
 
-说明：这里调用OpenCV相关函数时采用了c语言形式
+##Test
+t2_1.jpg	1366*768
+
+t3_1.jpg	1366*768
+
+out2_1.jpg	t2_1.jpg的边缘图像
+
+out3_1.jpg	t3_1.jpg的边缘图像
+
+说明：t2_x.jpg为不同分辨率版本
+
 ##TO DO
-优化找圆部分
+优化找圆部分，参数可否自动配置，以及速度如何
 
 自动设置Canny函数参数
 
