@@ -6,6 +6,7 @@
 
 using namespace std;
 IplImage* img = NULL;
+IplImage* img_tmp2 = NULL;
 IplImage* img_gray = NULL;
 IplImage* img_edge = NULL;//edge img without colour
 IplImage* img_cedge = NULL;//edge img with colour
@@ -17,7 +18,7 @@ char TbarName[] = "Threshold";
 void on_Tbar(int h)
 {
 	//doubt? 
-	//cvSmooth(img_gray, img_tmp, CV_BLUR, 3, 3, 0, 0);
+	//cvSmooth(img_gray, img_tmp2, CV_BLUR, 3, 3, 0, 0);
 	
 	//canny changeable
 	cvCanny(img_gray, img_edge, (float)h, (float)h*3, 3);
@@ -30,8 +31,8 @@ void on_Tbar(int h)
 	cvShowImage(WindName, img_cedge);
 	
 	//save the img
-	//cvNot(img_cedge, img_tmp);
-	//cvSaveImage("outP.jpg", img_tmp);
+	cvNot(img_cedge, img_tmp);
+	cvSaveImage("outP.jpg", img_tmp);
 	
 
 }
@@ -48,6 +49,7 @@ void edge(char *fileN)
 
 	//create image
 	img_tmp = cvCreateImage(cvGetSize(img), IPL_DEPTH_8U, 3);
+	img_tmp2 = cvCreateImage(cvGetSize(img), IPL_DEPTH_8U, 1);
 	img_edge = cvCreateImage(cvGetSize(img), IPL_DEPTH_8U, 1);
 	img_gray = cvCreateImage(cvGetSize(img), IPL_DEPTH_8U, 1);
 	img_cedge = cvCreateImage(cvGetSize(img), IPL_DEPTH_8U, 3);

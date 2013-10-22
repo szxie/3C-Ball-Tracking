@@ -5,8 +5,6 @@ Edge.cpp	可以用的提取边缘的代码（c语言格式）
 
 Circle.cpp	找圆代码，只对out2_1.jpg有效（c++语言格式）
 
-try.cpp		可以用来测试环境配置是否成功
-
 ##Test
 t2_1.jpg	1366*768
 
