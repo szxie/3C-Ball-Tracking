@@ -1,34 +1,30 @@
-#3C科创
-AIM：
+3C科创 by clz
+===============
+### AIM：
 
-算出图中圆的直径
+* 算出图中圆的直径
+* 直径->摄像头距离->（x,y）坐标
+* 图->视频
 
-直径->摄像头距离->（x,y）坐标
+### Code (in ./code)
 
-图->视频
+* 3C.cpp	主函数，摄像头输入
+* 3CC.cpp	主函数，处理一张图片
+* EdgeF.cpp	边缘函数，输入原图，返回边缘图
+* HSVF.cpp	HSV函数，输入原图和边缘图，返回HSV后的边缘图
+* CircleF.cpp	找园函数，输入HSV边缘图和原图，返回加上找到的园的图
 
-##Code
-Edge.cpp	可以用的提取边缘的代码（c语言格式）
+### Data (in ./data)
+* all 1266*768
+* t5_1.jpg 和 t6_1.jpg 的区别在于照相时对焦点是否在球上
 
-Circle.cpp	找圆代码，只对out2_1.jpg有效（c++语言格式）
+### TO DO
+* 准确度问题
+主要是边缘的效果不好
+* 代码结构
+可能会崩溃，希望能统一为C++格式
 
-##Test
-t2_1.jpg	1366*768
-
-t3_1.jpg	1366*768
-
-out2_1.jpg	t2_1.jpg的边缘图像
-
-out3_1.jpg	t3_1.jpg的边缘图像
-
-说明：t2_x.jpg为不同分辨率版本
-
-##TO DO
-边缘方向：
-
-尝试动态调整霍夫圆参数，以及自动调整尝试。同时Canny的参数做到自动调整。
-
-颜色方向：
-
-从颜色着手算直径
+### Other
+[OpenCV手册][ref]。
+[ref]: http://www.opencv.org.cn/opencvdoc/2.3.2/html/index.html
 
