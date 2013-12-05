@@ -5,6 +5,8 @@
 *.md~
 note
 note~
+.gitignore~
+.ignore~
 past/
 cheng/
 TestD/
