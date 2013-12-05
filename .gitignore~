@@ -1,0 +1,12 @@
+*.o
+*.cpp~
+*.h~
+*.~
+*.md~
+note
+note~
+
+past/
+cheng/
+TestD/
+zhang/
