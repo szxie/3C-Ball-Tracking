@@ -21,6 +21,7 @@ Mat Circle(IplImage* img1, IplImage* img2)
     /// Apply the Hough Transform to find the circles
   
     HoughCircles( src_gray, circles, CV_HOUGH_GRADIENT, 3, src_gray.rows/10, 100, src_gray.rows/5, 0, src_gray.rows/2);
+    //HoughCircles( src_gray, circles, CV_HOUGH_GRADIENT, 2, src_gray.rows/4, 200, 100, 25, 0);
     for( size_t i = 0; i < circles.size(); i++ )
     {
         std::cout<<cvRound(circles[i][0])<<' '<<cvRound(circles[i][1])<<' '<<cvRound(circles[i][2])<<std::endl;
