@@ -32,17 +32,17 @@ int main(int argc, char *argv[])
   	imshow( WindName, img_circle );
   	
   	//window
-	cvNamedWindow(WindNameE, 0);
+	cvNamedWindow(WindNameE, 1);
 	cvShowImage(WindNameE, img_cedge);
-	cvNamedWindow(WindNameH, 0);
+	cvNamedWindow(WindNameH, 1);
 	cvShowImage(WindNameH, img_HSV);
 
 	//delete
 	cvWaitKey(0);
 	cvDestroyWindow(WindName);
 
-
-  	waitKey(0);
+	while (true);
+  	//waitKey(0);
 	return 0;
 
 }
