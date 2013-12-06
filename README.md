@@ -47,6 +47,3 @@ HSV函数，三个参数，原图，边缘图，结果图 （计算依赖，结�
 [OpenCV手册][ref]
 [ref]: http://www.opencv.org.cn/opencvdoc/2.3.2/html/index.html
 
-
-![替代文本](/data/t0.jpg)
-
