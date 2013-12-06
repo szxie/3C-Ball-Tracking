@@ -4,7 +4,6 @@
 #include <fstream>
 
 using namespace cv;
-
 const int MaxHue = 15;
 const int MinHue = 5;
 
@@ -19,6 +18,7 @@ bool isNearHueOfBall(uchar* data, int slot, int nearThresh, const Mat& img_HSV);
 bool isHueOfBall(int hue, int s, int v);
 bool isOutOfBound(int slot, const Mat &img_HSV);
 void HSV(const Mat &img, const Mat &img_edge, Mat &img_re);
+void filterT(const Mat &img_HSV, Mat &img_re);
 
 void refineVirginByColor(const Mat &img_edge, const Mat &img_HSV, Mat &img_tmpOutput, int nearThresh)
 {
@@ -41,6 +41,13 @@ void refineVirginByColor(const Mat &img_edge, const Mat &img_HSV, Mat &img_tmpOu
 	img_tmpOutput = img_tmp.clone();
 }
 
+void filterT(const Mat &img_HSV, Mat &img_re)
+{
+	Mat img_tmp;
+	inRange(img_HSV, Scalar(MinHue, MinS, MinV), Scalar(MaxHue, MaxS, MaxV), img_tmp);
+	img_re = img_tmp.clone();
+
+}
 
 bool isNearHueOfBall(uchar* data, int slot, int nearThresh, const Mat& img_HSV)
 {
@@ -101,6 +108,8 @@ void HSV(const Mat &img, const Mat &img_edge, Mat &img_re)
 	Mat img_HSV;
 	cvtColor(img, img_HSV, CV_BGR2HSV);
 	refineVirginByColor(img_edge, img_HSV, img_re, 0);
+	//filterT(img_HSV, img_re);
+
 }
 
 /*
