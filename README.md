@@ -48,5 +48,6 @@ HSV函数，三个参数，原图，边缘图，结果图 （计算依赖，结�
 [ref]: http://www.opencv.org.cn/opencvdoc/2.3.2/html/index.html
 
 [Color Detection & Object Tracking][ref]
-[ref]:http://opencv-srf.blogspot.com/2010/09/object-detection-using-color-seperation.html
+[ref]: http://opencv-srf.blogspot.com/2010/09/object-detection-using-color-seperation.html
 
+> There is a open source software, called 'ColorWheelHSV', that enables you to find the 'hue', 'saturation' and 'value' for a specific object easily.
