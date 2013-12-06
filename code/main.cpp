@@ -34,16 +34,16 @@ int main(int argc, char *argv[])
     	debug = frame.clone();
     		
     	if (!frame.empty()){
-    		Edge(debug, img_cedge);
-    		HSV(debug, img_cedge, img_HSV);
-    		Circle(img_HSV, debug, img_circle);
+    		//Edge(debug, img_cedge);
+    		HSV(debug, debug, img_HSV);
+    		//Circle(img_HSV, debug, img_circle);
 		}
 		else {
 			printf("error--break");
 			break;
 		}
-      	imshow(WindName,img_circle);
-      	imshow(WindNameE, img_cedge);
+      	//imshow(WindName,img_circle);
+      	//imshow(WindNameE, img_cedge);
       	imshow(WindNameH, img_HSV);
       	
       	char c=cvWaitKey(10);
