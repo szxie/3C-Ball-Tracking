@@ -17,9 +17,9 @@ int main(int argc, char *argv[])
 	Mat img = imread(argv[1], 1);
 	Mat img_cedge, img_HSV, img_circle;
 	
-	Edge(img, img_cedge);	
-	HSV(img, img_cedge, img_HSV);	
-	Circle(img_HSV, img, img_circle);
+	//Edge(img, img_cedge);	
+	//HSV(img, img_cedge, img_HSV);	
+	Circle(img, img, img_circle);
 		
 	//delete
   	namedWindow( WindName, CV_WINDOW_AUTOSIZE );

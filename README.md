@@ -30,7 +30,7 @@ HSV函数，三个参数，原图，边缘图，结果图 （计算依赖，结�
 
 ### Data (in ./data)
 * all tx_1.jpg 都为1366*768 或 1366*908
-* t5_1.jpg 和 t6_1.jpg 的区别在于照相时对焦点是否在球上
+* t5_1.jpg 和 t6_1.jpg 的区别在于照相是否对焦在球上
 
 ### TO DO
 * 准确度问题
@@ -46,4 +46,7 @@ HSV函数，三个参数，原图，边缘图，结果图 （计算依赖，结�
 ### Other
 [OpenCV手册][ref]
 [ref]: http://www.opencv.org.cn/opencvdoc/2.3.2/html/index.html
+
+[Color Detection & Object Tracking][ref]
+[ref]:http://opencv-srf.blogspot.com/2010/09/object-detection-using-color-seperation.html
 

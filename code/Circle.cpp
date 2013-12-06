@@ -19,7 +19,8 @@ void Circle(const Mat &src1, const Mat &src2, Mat &srcorin)
 
     /// Apply the Hough Transform to find the circles
   
-    HoughCircles( src_gray, circles, CV_HOUGH_GRADIENT, 3, src_gray.rows/10, 100, src_gray.rows/5, 0, src_gray.rows/2);
+    //HoughCircles( src_gray, circles, CV_HOUGH_GRADIENT, 3, src_gray.rows/10, 100, src_gray.rows/5, 0, src_gray.rows/2);
+    HoughCircles( src_gray, circles, CV_HOUGH_GRADIENT, 3, src_gray.rows/10, 100, src_gray.rows/5, 0, 0);
     for( size_t i = 0; i < circles.size(); i++ )
     {
         std::cout<<cvRound(circles[i][0])<<' '<<cvRound(circles[i][1])<<' '<<cvRound(circles[i][2])<<std::endl;
