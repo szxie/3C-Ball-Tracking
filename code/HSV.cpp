@@ -4,11 +4,13 @@
 #include <fstream>
 
 using namespace cv;
-const int MaxHue = 15;
-const int MinHue = 5;
+//乒乓HSV 5/15 100/255 70/255
+//网球HSV 18/48 73/255 70/255
+const int MaxHue = 48;
+const int MinHue = 18;
 
 const int MaxS = 255;
-const int MinS = 100;
+const int MinS = 73;
 
 const int MaxV = 255;
 const int MinV = 70;
