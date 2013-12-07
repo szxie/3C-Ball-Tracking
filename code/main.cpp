@@ -37,14 +37,14 @@ int main(int argc, char *argv[])
     	if (!frame.empty()){
     		//Edge(debug, img_cedge);
     		HSV(debug, debug, img_HSV);
-    		//Circle(img_HSV, debug, img_circle);
+    		Circle(img_HSV, debug, img_circle);
     		//Circle(img_HSV, img_HSV, img_circle2);
 		}
 		else {
 			printf("error--break");
 			break;
 		}
-      	//imshow(WindName,img_circle);
+      	imshow(WindName,img_circle);
       	//imshow(WindNameE, img_cedge);
       	imshow(WindNameH, img_HSV);
       	

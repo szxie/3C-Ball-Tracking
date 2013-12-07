@@ -6,11 +6,11 @@
 using namespace cv;
 //乒乓HSV 5/15 100/255 70/255
 //网球HSV 18/48 73/255 70/255
-const int MaxHue = 15;
-const int MinHue = 5;
+const int MaxHue = 48;
+const int MinHue = 18;
 
 const int MaxS = 255;
-const int MinS = 100;
+const int MinS = 73;
 
 const int MaxV = 255;
 const int MinV = 70;
@@ -215,8 +215,8 @@ void HSV(const Mat &img, const Mat &img_edge, Mat &img_re)
 {
 	Mat img_HSV,img_t1;
 	cvtColor(img, img_HSV, CV_BGR2HSV);
-	refineVirginByColor(img_edge, img_HSV, img_t1, 0);
-	findBall(img_t1,img,img_re);
+	refineVirginByColor(img_edge, img_HSV, img_re, 0);
+	//findBall(img_t1,img,img_re);
 	//filterT(img_HSV, img_re);
 }
 
