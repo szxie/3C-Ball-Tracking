@@ -17,17 +17,17 @@ int main(int argc, char *argv[])
 	Mat img = imread(argv[1], 1);
 	Mat img_cedge, img_HSV, img_circle;
 	
-	//Edge(img, img_cedge);	
+	Edge(img, img_cedge);	
 	//HSV(img, img_cedge, img_HSV);	
-	Circle(img, img, img_circle);
+	Circle(img_cedge, img, img_circle);
 		
 	//delete
   	namedWindow( WindName, CV_WINDOW_AUTOSIZE );
   	namedWindow( WindNameE, CV_WINDOW_AUTOSIZE );
   	namedWindow( WindNameH, CV_WINDOW_AUTOSIZE );
   	imshow( WindName, img_circle );
-	imshow( WindNameE, img_cedge);
-	imshow( WindNameH, img_HSV);
+	//imshow( WindNameE, img_cedge);
+	//imshow( WindNameH, img_HSV);
 	  	
   	//window
 

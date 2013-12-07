@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	Mat img_circle2;
 	
 	namedWindow( WindName, CV_WINDOW_NORMAL );
-	namedWindow( WindNameE, CV_WINDOW_NORMAL );
+	//namedWindow( WindNameE, CV_WINDOW_NORMAL );
   	namedWindow( WindNameH, CV_WINDOW_NORMAL );
   	
   	CvCapture* capture = cvCreateCameraCapture(-1);
@@ -36,18 +36,17 @@ int main(int argc, char *argv[])
     		
     	if (!frame.empty()){
     		//Edge(debug, img_cedge);
-    		img_cedge = debug;
-    		HSV(debug, img_cedge, img_HSV);
-    		Circle(img_HSV, debug, img_circle);
-    		Circle(img_HSV, img_HSV, img_circle2);
+    		HSV(debug, debug, img_HSV);
+    		//Circle(img_HSV, debug, img_circle);
+    		//Circle(img_HSV, img_HSV, img_circle2);
 		}
 		else {
 			printf("error--break");
 			break;
 		}
-      	imshow(WindName,img_circle);
-      	imshow(WindNameE, img_cedge);
-      	imshow(WindNameH, img_circle2);
+      	//imshow(WindName,img_circle);
+      	//imshow(WindNameE, img_cedge);
+      	imshow(WindNameH, img_HSV);
       	
       	char c=cvWaitKey(10);
       	if(c==27)break;
