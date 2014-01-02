@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( 3C )
+find_package( OpenCV REQUIRED )
+set(SRC_LIST main.cpp Edge.cpp Circle.cpp HSV.cpp)
+add_executable( 3C ${SRC_LIST} )
+target_link_libraries( 3C ${OpenCV_LIBS} )

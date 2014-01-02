@@ -1,6 +1,5 @@
 //Edge part
-#include <cv.h>
-#include <highgui.h> 
+ #include <opencv2/opencv.hpp> 
 #include <iostream>
 const int MAX = 90;
 const int MIN = 30;
